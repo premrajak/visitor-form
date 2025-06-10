@@ -97,6 +97,24 @@ app.post('/submit-form', upload, async (req, res) => {
   }
 });
 
+// API Endpoint to Get All Visitors
+app.get('/getRegistration', async (req, res) => {
+  try {
+    const visitors = await Visitor.find().sort({ createdAt: -1 }); // Most recent first
+    res.status(200).json({
+      success: true,
+      data: visitors
+    });
+  } catch (err) {
+    console.error('Error fetching visitors:', err);
+    res.status(500).json({
+      success: false,
+      message: 'Error retrieving visitor data'
+    });
+  }
+});
+
+
 // Start Server
 app.listen(3000, () => {
   console.log('🚀 Server running at http://localhost:3000');
