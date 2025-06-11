@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PinToof Legal And Technological Private Limited - Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="form_making.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="company-info-container">
+            <div class="company-logo">
+                <img src="pintoof1.webp" alt="PinToof Logo">
+            </div>
+            <div class="company-details">
+                <h1 class="company-name">PinToof Legal And Technological Private Limited</h1>
+                <p class="company-meta">
+                    <strong class="highlight">Ministry of Corporate Affairs (Govt. of India)</strong><br>
+                    <strong class="highlight">Govt. CIN: U69100MP2024PTC072082</strong><br>
+                    <strong class="highlight">GSTIN: 23AAOCP8968K1ZJ</strong>
+                </p>
+                <p class="company-address">
+                    <strong>Registered Office:</strong> Intkhedi Sadak Berasia Road, Bhopal 462038 (MP)
+                </p>
+                <p class="company-contact">
+                    <strong class="highlight">Email:</strong> info@pintoofgroup.in
+                    <strong class="highlight website-link">Website:</strong> <a href="http://www.pintoofgroup.in"
+                        target="_blank">www.pintoofgroup.in</a>
+                </p>
+                <p class="company-contact">
+                    <strong class="highlight">Phone:</strong> 8269712463, 7987798543
+                </p>
+            </div>
+        </div>
+        <div class="header-divider"></div>
+    </header>
+
+    <main>
+        <div style="display:flex;justify-content:flex-end ;">
+            <a  href="/filled-form.html" style="color:#fff;text-decoration: none; padding:0.5rem 1rem;background: blue;border:none;border-radius: 12px;">Previous
+                added forms</a>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="form-title"><u>Registration Form</u></h2>
+            </div>
+            <form id="visitorForm">
+                <div class="user-details">
+                    <div class="form-group">
+                        <label for="regNo">Registration No <sup>*</sup></label>
+                        <input type="text" id="regNo" name="regNo" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="fullName">Name <sup>*</sup></label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherName">Father's Name <sup>*</sup></label>
+                        <input type="text" id="fatherName" name="fatherName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number <sup>*</sup></label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}"
+                            title="Please enter a 10-digit phone number (e.g., 9876543210)" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="fullAddress">Full Address <sup>*</sup></label>
+                        <input type="text" id="fullAddress" name="fullAddress" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address <sup>*</sup></label>
+                        <input type="email" id="emailAddress" name="emailAddress" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pinNumber">Pin Number <sup>*</sup></label>
+                        <input type="text" id="pinNumber" name="pinNumber" pattern="[0-9]{6}"
+                            title="Please enter a 6-digit PIN code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="aadharCard">Aadhar Card <sup>*</sup></label>
+                        <input type="text" id="aadharCard" name="aadharCard" pattern="[0-9]{12}"
+                            title="Please enter a 12-digit Aadhar number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="panCard">Pan Card <sup>*</sup></label>
+                        <input type="text" id="panCard" name="panCard" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                            title="Please enter a valid PAN number (e.g., ABCDE1234F)" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="referredBy">Reference By <sup>*</sup></label>
+                        <input type="text" id="referredBy" name="referredBy" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <sup>*</sup></label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitorPurpose">Visitor Purpose <sup>*</sup></label>
+                        <select id="visitorPurpose" name="visitorPurpose" required>
+                            <option value="">-- Select Purpose --</option>
+                            <option value="Personal Loan">Personal Loan</option>
+                            <option value="Business Loan">Business Loan</option>
+                            <option value="Education Loan">Education Loan</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender <sup>*</sup></label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <label for="female">Female</label>
+                            <input type="radio" id="preferNotToSay" name="gender" value="Prefer not to say">
+                            <label for="preferNotToSay">Prefer not to say</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitDate">Office Visit Date <sup>*</sup></label>
+                        <input type="date" id="visitDate" name="visitDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="marriageStatus">Marriage Status <sup>*</sup></label>
+                        <select id="marriageStatus" name="marriageStatus" required>
+                            <option value="">-- Select Status --</option>
+                            <option value="Married">Married</option>
+                            <option value="Unmarried">Unmarried</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group file-upload-group">
+                        <label for="photo">Photo <sup>*</sup> </label>
+                        <div class="image-preview">
+                            <img id="outputPhoto" alt="Photo Preview">
+                        </div>
+                        <input type="file" name="photo" id="photo" onchange="loadFile(event, 'outputPhoto')" required
+                            accept="image/*">
+                    </div>
+
+                    <div class="form-group file-upload-group">
+                        <label for="signature">Signature <sup>*</sup></label>
+                        <div class="image-preview signature-preview">
+                            <img id="outputSignature" alt="Signature Preview">
+                        </div>
+                        <input type="file" id="signature" name="signature" onchange="loadFile(event, 'outputSignature')"
+                            required accept="image/*">
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Function to load and display image preview
+        function loadFile(event, outputId) {
+            const output = document.getElementById(outputId);
+            if (event.target.files && event.target.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    output.src = e.target.result;
+                    output.style.display = 'block';
+                };
+                reader.readAsDataURL(event.target.files[0]);
+            } else {
+                output.src = '';
+                output.style.display = 'none';
+            }
+        }
+
+        // Generate and set registration number on page load
+        function generateRegNo() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const day = today.getDate().toString().padStart(2, '0');
+            const hours = today.getHours().toString().padStart(2, '0');
+            const minutes = today.getMinutes().toString().padStart(2, '0');
+            const seconds = today.getSeconds().toString().padStart(2, '0');
+            // Adding a timestamp to ensure uniqueness, or you can use a counter from a backend
+            const timestampPart = `${year}${month}${day}${hours}${minutes}${seconds}`;
+            const randomPart = Math.floor(1000 + Math.random() * 9000); // 4-digit random number
+            return `REG-${timestampPart}-${randomPart}`;
+        }
+        document.getElementById("regNo").value = generateRegNo();
+
+        // JavaScript to get form values on submit
+        document.getElementById('visitorForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = {};
+
+            // Collect all form data
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+
+            // For file inputs, the `value` from formData.entries() is the File object itself.
+            // If you need to store file names or base64 strings, you'd typically handle that here
+            // before sending to a backend, or send the FormData directly.
+            if (form.photo.files[0]) {
+                data.photoFileName = form.photo.files[0].name;
+                // Example of reading photo as base64 (useful for small images or direct embedding,
+                // but not generally recommended for large file uploads to a server)
+                // const photoReader = new FileReader();
+                // photoReader.onload = function() {
+                //     data.photoBase64 = photoReader.result;
+                //     console.log('Form Data with Photo Base64:', data);
+                // };
+                // photoReader.readAsDataURL(form.photo.files[0]);
+            }
+            if (form.signature.files[0]) {
+                data.signatureFileName = form.signature.files[0].name;
+            }
+
+            console.log('Form Data Collected:', data);
+
+            // In a real application, you would send this 'data' object to a server.
+            // Example using Fetch API:
+
+            fetch('https://visitor-form-hn9f.onrender.com/submit-form', { // Replace with your actual backend endpoint
+                method: 'POST',
+                body: formData // Send FormData directly for file uploads, or JSON.stringify(data) for text data
+                // If sending JSON, remember to set 'Content-Type': 'application/json' in headers
+            })
+                .then(response => response.json())
+                .then(result => {
+                    console.log('Success:', result);
+                    alert('Registration submitted successfully!');
+                    form.reset(); // Clear the form
+                    document.getElementById('outputPhoto').style.display = 'none'; // Hide photo preview
+                    document.getElementById('outputSignature').style.display = 'none'; // Hide signature preview
+                    document.getElementById("regNo").value = generateRegNo(); // Generate new reg number
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Registration failed. Please try again.');
+                });
+
+            // alert('Form data logged to console. In a real application, this would be sent to a server.');
+            form.reset(); // Clear the form
+            document.getElementById('outputPhoto').style.display = 'none'; // Hide photo preview
+            document.getElementById('outputSignature').style.display = 'none'; // Hide signature preview
+            document.getElementById("regNo").value = generateRegNo(); // Generate new reg number after reset
+        });
+
+           function displayPreview(data) {
+      const previewHTML = `
+        <p><strong>Registration No:</strong> ${data.regNo}</p>
+        <p><strong>Name:</strong> ${data.fullName}</p>
+        <p><strong>Father's Name:</strong> ${data.fatherName}</p>
+        <p><strong>Phone:</strong> ${data.phoneNumber}</p>
+        <p><strong>Email:</strong> ${data.emailAddress}</p>
+        <p><strong>Address:</strong> ${data.fullAddress}, PIN: ${data.pinNumber}</p>
+        <p><strong>Aadhar:</strong> ${data.aadharCard}</p>
+        <p><strong>PAN:</strong> ${data.panCard}</p>
+        <p><strong>Referred By:</strong> ${data.referredBy}</p>
+        <p><strong>DOB:</strong> ${data.dob}</p>
+        <p><strong>Gender:</strong> ${data.gender}</p>
+        <p><strong>Marriage Status:</strong> ${data.marriageStatus}</p>
+        <p><strong>Purpose:</strong> ${data.visitorPurpose}</p>
+        <p><strong>Visit Date:</strong> ${data.visitDate}</p>
+        <p><strong>Photo:</strong><br><img src="${data.photoBase64}" /></p>
+        <p><strong>Signature:</strong><br><img src="${data.signatureBase64}" /></p>
+      `;
+      document.getElementById('previewContent').innerHTML = previewHTML;
+      document.getElementById('previewSection').style.display = 'block';
+    }
+
+    function printOrDownload() {
+      try {
+        window.print();
+      } catch (e) {
+        html2pdf().from(document.getElementById('previewSection')).save('registration-summary.pdf');
+      }
+    }
+
+    </script>
+</body>
+
+</html>

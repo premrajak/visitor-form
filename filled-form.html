@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visitor Forms List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1200px;
+    }
+
+    th, td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+
+    img {
+      max-width: 80px;
+      height: auto;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Visitor Form Submissions</h1>
+  <div class="table-container">
+    <table id="formsTable">
+      <thead>
+        <tr>
+          <th>Reg. No</th>
+          <th>Full Name</th>
+          <th>Father Name</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>Marital Status</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>PIN</th>
+          <th>Aadhar</th>
+          <th>PAN</th>
+          <th>Referred By</th>
+          <th>Visit Date</th>
+          <th>Purpose</th>
+          <th>Photo</th>
+          <th>Signature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- JS will fill rows here -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    async function loadFormList() {
+      try {
+        const response = await fetch('https://visitor-form-hn9f.onrender.com/getRegistration'); // Replace with your endpoint
+        const forms = await response.json();
+        console.log(forms,'forms')
+        const tableBody = document.querySelector("#formsTable tbody");
+        tableBody.innerHTML = ''; // Clear old content
+
+        forms?.data?.forEach(form => {
+          const row = document.createElement("tr");
+
+          row.innerHTML = `
+            <td>${form.regNo || '-'}</td>
+            <td>${form.fullName || '-'}</td>
+            <td>${form.fatherName || '-'}</td>
+            <td>${form.dob ? new Date(form.dob).toLocaleDateString() : '-'}</td>
+            <td>${form.gender || '-'}</td>
+            <td>${form.marriageStatus || '-'}</td>
+            <td>${form.phoneNumber || '-'}</td>
+            <td>${form.emailAddress || '-'}</td>
+            <td>${form.fullAddress || '-'}</td>
+            <td>${form.pinNumber || '-'}</td>
+            <td>${form.aadharCard || '-'}</td>
+            <td>${form.panCard || '-'}</td>
+            <td>${form.referredBy || '-'}</td>
+            <td>${form.visitDate ? new Date(form.visitDate).toLocaleDateString() : '-'}</td>
+            <td>${form.visitorPurpose || '-'}</td>
+            <td>
+              ${form.photoFile ? `<img src="${form.photoFile}" alt="Photo">` : '-'}
+            </td>
+            <td>
+              ${form.signatureFile ? `<img src="${form.signatureFile}" alt="Signature">` : '-'}
+            </td>
+          `;
+
+          tableBody.appendChild(row);
+        });
+      } catch (err) {
+        console.error("Error loading form list:", err);
+        const tableBody = document.querySelector("#formsTable tbody");
+        tableBody.innerHTML = `<tr><td colspan="17" style="color:red;">Failed to load data</td></tr>`;
+      }
+    }
+
+    loadFormList();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* Header Styles */
+.main-header {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.company-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px; /* Space between logo and details */
+}
+
+.company-logo img {
+    width: 150px; /* Adjusted size for better integration */
+    height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.company-details {
+    text-align: left;
+    max-width: 600px; /* Control width of text block */
+}
+
+.company-name {
+    color: #0056b3; /* Darker blue for prominence */
+    margin: 0 0 10px 0;
+    font-size: 1.8em;
+    line-height: 1.2;
+}
+
+.company-meta,
+.company-address,
+.company-contact {
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.highlight {
+    color: #007bff; /* Highlight key company details */
+}
+    
+.website-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.website-link a:hover {
+    text-decoration: underline;
+}
+
+.header-divider {
+    width: 100%;
+    height: 2px;
+    background-color: #eee;
+    margin-top: 20px;
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #ffffff;
+    /* padding: 30px 40px; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+    /* max-width: 900px; */
+    width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-title {
+    color: #333;
+    font-size: 2em;
+    border-bottom: 2px solid #007bff;
+    display: inline-block; /* To make underline fit content */
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+/* User Details Grid Layout */
+.user-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px 30px; /* Row and column gap */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1; /* Make full address span both columns */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* Input, Select, Textarea Styling */
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="date"]:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Required Field Asterisk */
+sup {
+    color: #dc3545; /* Red for required fields */
+    font-size: 0.8em;
+    margin-left: 3px;
+}
+
+/* Radio Button Group */
+.radio-group label {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: normal; /* Override bold from .form-group label */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle; /* Align radio button with text */
+}
+
+/* File Upload and Image Previews */
+.file-upload-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align label/input to start */
+}
+
+.image-preview {
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow for image scaling */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.image-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none; /* Hidden by default, shown by JS */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.signature-preview {
+    height: 200px; /* Specific height for signature preview */
+}
+
+.form-group input[type="file"] {
+    padding: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Take full width of its container */
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+/* Submit Button */
+.button-container {
+    grid-column: 1 / -1; /* Span across both columns */
+    text-align: center;
+    margin-top: 30px;
+}
+
+.button-container button {
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-container button:hover {
+    background-color: #218838; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .user-details {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .form-container, .main-header {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .company-info-container {
+        flex-direction: column; /* Stack logo and details vertically */
+    }
+
+    .company-details {
+        text-align: center; /* Center text details on small screens */
+    }
+
+    .company-name {
+        font-size: 1.5em; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+    .form-title {
+        font-size: 1.5em;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="date"],
+    .form-group select,
+    .form-group input[type="file"] {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+    .button-container button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+
+
+#previewSection {
+  border: 2px dashed #666;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  background-color: #fff;
+}
+
+#previewSection img {
+  max-height: 120px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+#previewSection h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
